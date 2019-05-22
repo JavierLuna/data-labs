@@ -8,15 +8,15 @@ def print_actual_board(board):
 print_actual_board(board)
 
 def check_rows():
-    for x in range(3):
-        if board[x][0] == board[x][1] and board[x][1] == board[x][2] and board[x][0] != '':
+    for row in range(3):
+        if board[row][0] == board[row][1] and board[row][1] == board[row][2] and board[row][0] != '':
             return True
         else:
             return False
         
 def check_cols():
-    for x in range(3):
-        if board[0][x] == board[1][x] and board[1][x] == board[2][x] and board[0][x] != '':
+    for col in range(3):
+        if board[0][col] == board[1][col] and board[1][col] == board[2][col] and board[0][col] != '':
             return True
         else:
             return False
