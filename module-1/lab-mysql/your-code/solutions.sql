@@ -18,3 +18,6 @@ CREATE TABLE customer (id_customer INT, Name VARCHAR(45), Lastname VARCHAR(45), 
 CREATE TABLE invoice (id_invoice INT, date DATE, VIN VARCHAR(45), id_customer INT, id_staff INT, id_store INT);
 CREATE TABLE salesperson (id_staff INT, Name VARCHAR(45), Lastname VARCHAR(45), id_store INT);
 CREATE TABLE store (id_store INT, Address VARCHAR(45), City VARCHAR(45), State_Province VARCHAR(45), Country VARCHAR(20), ZIP_Postal_Code VARCHAR(20));
+
+
+CREATE SCHEMA IF NOT EXISTS
