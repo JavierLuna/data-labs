@@ -86,7 +86,7 @@ def show_play(playerA, playerB, turn):
                 # Si no hay combinación ganadora y no se han alcanzado las 9 posiciones, se lanza de nuevo el juego
                 # pero se altera el orden de los jugadores
                 if turn < 9:
-                    show_play(playerB, playerA)
+                    show_play(playerB, playerA, turn)
                 # En caso contrario, se termina la partida
                 else:
                     print('Terminó la partida')
@@ -101,11 +101,11 @@ def show_play(playerA, playerB, turn):
         else:
             print('La casilla está ocupada, intenta otra posición')
             print_actual_board(board)
-            show_play(playerA, playerB)
+            show_play(playerA, playerB, turn)
     # Si se ha tecleado una tecla no válida se lanza el mensaje correspondiente y se vuelve a lanzar el juego
     else:
         print("Sólo puedes elegir entre 1, 2 y 3 :)")
-        show_play(playerA, playerB)
+        show_play(playerA, playerB, turn)
         print_actual_board(board)
 
 show_play('O', 'X', turn)
