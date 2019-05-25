@@ -98,4 +98,4 @@ UPDATE customers
 SET email = "hello@napoleon.me" WHERE name = "Napoléon Bonaparte";
 
 -- ELIMINAMOS UN DUPLICADO
-DELETE FROM cars WHERE car_ID = 5
+DELETE FROM cars WHERE car_ID = 5;
