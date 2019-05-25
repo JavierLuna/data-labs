@@ -59,7 +59,7 @@ def check_win():
 
 # LA FUNCIÖN JUEGO
 # Como parámetros recibe player A y player B que pueden ser strings o números
-def show_play(playerA, playerB):
+def show_play(playerA, playerB, turn):
     print("JUGADA:")
     # Almacenamos el valor de un input en la variable fila
     row = input("FILA   : ")
@@ -91,6 +91,7 @@ def show_play(playerA, playerB):
                 else:
                     print('Terminó la partida')
                     # Si alguien ha ganado, se imprime quién ganó
+                    win = check_win()
                     if win == True:
                         print('¡Ganaste, jugadora '+ playerA + '!¡Hurraaaa!')
                     # En caso contrario se imprime Tablas
@@ -107,7 +108,7 @@ def show_play(playerA, playerB):
         show_play(playerA, playerB)
         print_actual_board(board)
 
-show_play('O', 'X')
+show_play('O', 'X', turn)
 
 
 
