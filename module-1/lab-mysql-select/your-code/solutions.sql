@@ -42,3 +42,23 @@ INNER join publishers ON titles.pub_id = publishers.pub_id
 GROUP BY authors.au_id, authors.au_lname, authors.au_fname, publishers.pub_name
 
 ORDER BY count(titles.title_id);
+
+-- CHALENGE 3
+-- "¿Cuál es el Top3 de autores o autoras que más títulos han vendido?
+-- Partimos de la selección anterior pero ya no necesitamos datos referentes a publishers.
+-- Añadimos el campo sales.qty porque es la cantidad de ventas
+-- Hacemos las mismas joins pero ahora cambiamos la última, el nexo es title_id que está en titles y en sale
+-- Agrupamos por la combinación de campos pedida: autor o autora, nombre, apellido
+-- Ordenamos según la suma de la cantidad de ventas y limitamos sólo a los tres primeros con el comando limit
+-- fuente: https://tutobasico.com/primeros-registros-sql/
+
+SELECT authors.au_id AS "Author_ID", authors.au_lname AS "Last_Name", 
+authors.au_fname AS "First_Name",sum(sales.qty) AS "Total"
+
+from authors
+INNER Join titleauthor ON authors.au_id = titleauthor.au_id
+INNER Join titles ON titleauthor.title_id = titles.title_id
+INNER join sales ON titles.title_id = sales.title_id
+GROUP BY authors.au_id, authors.au_lname, authors.au_fname
+ORDER BY sum(sales.qty) desc limit 3;
+
