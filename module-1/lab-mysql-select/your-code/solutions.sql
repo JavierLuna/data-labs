@@ -33,7 +33,7 @@ ORDER BY authors.au_lname;
 -- NOTA 2: si no lo ordenamos también se ejecuta la consulta
 SELECT authors.au_id AS "Author_ID", authors.au_lname AS "Last_Name", 
 authors.au_fname AS "First_Name", publishers.pub_name AS "Publisher",
-count(titles.title_id) AS "Title Count"
+count(titles.title_id) AS "Title_Count"
 
 from authors
 INNER Join titleauthor ON authors.au_id = titleauthor.au_id
