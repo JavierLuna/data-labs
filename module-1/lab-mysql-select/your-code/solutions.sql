@@ -77,4 +77,20 @@ INNER join sales ON titles.title_id = sales.title_id
 GROUP BY authors.au_id, authors.au_lname, authors.au_fname
 ORDER BY sum(titles.ytd_sales) desc;
 
+-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-BONUS-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+-- En este caso nos pedían los/as tres autores/as que más beneficios obtienen
+-- Partimos de las selecciones previas, pero ahora uno de las columnas va a ser combinación de columnas de diferentes tablas.
+-- Para obtener el valor, operamos sobre las columnas, teniendo en cuenta la tabla de donde vienen.
+-- Agrupamos como antes, por id, nombre y apellido de los autores o autoras.
+-- Lo ordenamos de manera descendente y limitamos a 3 el número de filas que aparecen
+
+SELECT authors.au_id AS "Author_ID", authors.au_lname AS "Last_Name", 
+authors.au_fname AS "First_Name",sum((titles.royalty * titleauthor.royaltyper/100) + titles.advance) AS "Profit"
+
+from authors
+INNER Join titleauthor ON authors.au_id = titleauthor.au_id
+INNER Join titles ON titleauthor.title_id = titles.title_id
+GROUP BY authors.au_id, authors.au_lname, authors.au_fname
+ORDER by Profit desc limit 3;
+
 
