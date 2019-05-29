@@ -46,19 +46,35 @@ ORDER BY count(titles.title_id);
 -- CHALENGE 3
 -- "¿Cuál es el Top3 de autores o autoras que más títulos han vendido?
 -- Partimos de la selección anterior pero ya no necesitamos datos referentes a publishers.
--- Añadimos el campo sales.qty porque es la cantidad de ventas
--- Hacemos las mismas joins pero ahora cambiamos la última, el nexo es title_id que está en titles y en sale
+-- Añadimos el campo titles.ytd_sales porque es la cantidad de ventas
+-- Hacemos las mismas joins pero ahora eliminamos la última porque no la necesitamos
 -- Agrupamos por la combinación de campos pedida: autor o autora, nombre, apellido
 -- Ordenamos según la suma de la cantidad de ventas y limitamos sólo a los tres primeros con el comando limit
 -- fuente: https://tutobasico.com/primeros-registros-sql/
 
 SELECT authors.au_id AS "Author_ID", authors.au_lname AS "Last_Name", 
-authors.au_fname AS "First_Name",sum(sales.qty) AS "Total"
+authors.au_fname AS "First_Name",sum(titles.ytd_sales) AS "Total"
+
+from authors
+INNER Join titleauthor ON authors.au_id = titleauthor.au_id
+INNER Join titles ON titleauthor.title_id = titles.title_id
+GROUP BY authors.au_id, authors.au_lname, authors.au_fname
+ORDER BY sum(titles.ytd_sales) desc limit 3;
+
+-- CHALENGE 4
+-- "¿Cuál es el Top3 de autores o autoras que más títulos han vendido?
+-- Partiendo de la selección anterior eliminamos el limit porque queremos todos los registros no solo los primeros.
+-- Realizamos un COALESCE para hacer un reemplazo de los NULL por 0 en los campos correspondientes.
+-- Observación: me salen sólo 19 filas, en lugar de las 23 que debieran salir
+
+SELECT authors.au_id AS "Author_ID", authors.au_lname AS "Last_Name", 
+authors.au_fname AS "First_Name",coalesce(sum(titles.ytd_sales), 0) AS "Total"
 
 from authors
 INNER Join titleauthor ON authors.au_id = titleauthor.au_id
 INNER Join titles ON titleauthor.title_id = titles.title_id
 INNER join sales ON titles.title_id = sales.title_id
 GROUP BY authors.au_id, authors.au_lname, authors.au_fname
-ORDER BY sum(sales.qty) desc limit 3;
+ORDER BY sum(titles.ytd_sales) desc;
+
 
