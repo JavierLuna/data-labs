@@ -1,107 +1,62 @@
-![IronHack Logo](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png)
+# Pipelines Project - Producción de alimentos proporcionado por la FAO
 
-# Guided Project: Web Data Pipeline
+## Descripción
 
-## Overview
+Para la realización de este proyecto se ha optado por el siguiente dataset:  
 
-The goal of this project is for you to practice what you have learned in the Intermediate Python and Data Engineering chapter of this program. For this project, you will start with a data set of your choice. You will need to import it, use your newly-acquired skills to build a data pipeline that processes the data and produces a result. You should demonstrate your proficiency with the tools we covered (functions, list comprehensions, string operations, and error handling) in your pipeline.
+[Who eats the food we grow?](https://www.kaggle.com/dorbicycle/world-foodfeed-production)  
 
-**You will be working individually for this project**, but we'll be guiding you along the process and helping you as you go. Show us what you've got!
+Muestra los cinco mayores productores de alimentos desde el año 1961 hasta el 2013  
+Podemos comparar la producción de alimentos de dos paises entre el año 2000 y el 2010  
 
----
+Food - Se refiere a la cantidad total de alimento disponible como alimento humano.  
+Feed - Se refiere a la cantidad de alimento disponible para alimentar al ganado y las aves de corral.  
+En la columna de los años, las cantidades están expresadas en 1000 toneladas.  
 
-## Technical Requirements
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/FAO_logo.svg/245px-FAO_logo.svg.png "FAO")
 
-The technical requirements for this project are as follows:
+## Archivos del repo
 
-* You must construct a data pipeline with the majority of your code wrapped in functions.
-* Each data pipeline stage should be covered: acquisition, wrangling, analysis, and reporting.
-* You must demonstrate all the topics we covered in the chapter (functions, list comprehensions, string operations, and error handling) in your processing of the data.
-* There should be some data set that gets imported and some result that gets exported.
-* Your code should be saved in a Python executable file (.py), your data should be saved in a folder named data, and your results should be saved in a folder named output.
-* You should also include a README.md file that describes the steps you took and your thought process as you built your data pipeline.
+**main.ipynb** : Para el trabajo de data cleaning y manipulation.  
+**main.py** : Pipeline  
+**config.py**: Configuración y contantes  
+**limpia.py**: Funciones para limpiar los datos  
+**analisis.py**: Funciones para el análisis de los datos  
+**guardar.py**: Funciones para guardar csv y gráficas  
+**report.py**: Funciones para crear los gráficos  
+**callapi.py**: Funciones para llamar a la api  
+**FAO.csv** : CSV de producción de alimentos  
+**README.md** : Descripción del proyecto  
 
-## Necessary Deliverables
 
-The following deliverables should be pushed to your Github repo for this chapter.
+## Parámetros para el main.py
 
-* **A Python (.py) code file** that contains the code for your data pipeline.
-* **A data folder** containing your data set.
-* **An output folder** containing the output of your data pipeline.
-* **A ``README.md`` file** containing a detailed explanation of the process followed in the design and construction of your pipeline and incorporation of intermediate Python concepts as well as your results, obstacles encountered, and lessons learned.
+**--p1** Primer pais a comparar  
+**--p2** Segundo pais a comparar  
+**-v** Ver la gráfica, por defecto a 0, por lo que no se ve (-v 1 para cargar la gráfica)  
 
-## Suggested Ways to Get Started
+Si no se especifica ningún país por defecto se selecciona Italy y France  
 
-* **Find a data set to process** - You can use a dataset you are familiar with like [Sharks](https://www.kaggle.com/teajay/global-shark-attacks/version/1) or find another. A great place to start looking would be [Awesome Public Data Sets](https://github.com/awesomedata/awesome-public-datasets) and [Kaggle Data Sets](https://www.kaggle.com/datasets).
-* **Examine the data and come up with a deliverable** before diving in and applying any methods to it.
-* **Break the project down into different steps** - leverage the stages of the data pipeline covered in the pipelines lesson and answer the appropriate questions for each stage.
-* **Use the tools in your tool kit** - your knowledge of intermediate Python as well as some of the things you've learned in previous chapters. This is a great way to start tying everything you've learned together!
-* **Work through the lessons in class** & ask questions when you need to! Think about adding relevant code to your project each night, instead of, you know... _procrastinating_.
-* **Commit early, commit often**, don’t be afraid of doing something incorrectly because you can always roll back to a previous version.
-* **Consult documentation and resources provided** to better understand the tools you are using and how to accomplish what you want.
+## Datos complementarios para el dataset
 
-## Useful Resources
+Para completar el conjunto de datos del que disponemos, realizaremos llamadas a la siguiente api:  
 
-* [Python Functional Programming How To Documentation](https://docs.python.org/3.7/howto/functional.html)
-* [Python List Comprehensions Documentation](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
-* [Python Errors and Exceptions Documentation](https://docs.python.org/3/tutorial/errors.html)
-* [StackOverflow String Operation Questions](https://stackoverflow.com/questions/tagged/string+python)
+[https://restcountries.eu/](https://restcountries.eu/)  
 
-## Project Feedback + Evaluation
+De la cual obetendremos el continente del area.  
 
-* __Technical Requirements__: Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
+## Anotaciones
 
-* __Creativity__: Did you add a personal spin or creative element into your project submission? Did you incorporate domain knowledge or unique perspective into your analysis.
+Para las gráficas de comparación de países se toman los años desde el 2000 al 2010  
+Para la gráfica de los mayores productores se utiliza todos los años disponibles en los datos  
 
-* __Code Quality__: Did you follow code style guidance and best practices covered in class?
+## Mejoras
+Sacar del main la sección de arg.
+Mejorar las gráficas
+...
 
-* __Total__: Your instructors will give you a total score on your project between:
+## Ampliación
+Se podría realizar una comparativa de la producción de alimentos con la población de estos paises durante ese periodo  
+Estos datos de población se pueden obtener de la FAO [http://www.fao.org/faostat/es/#data/OA](http://www.fao.org/faostat/es/#data/OA)
 
-    **Score**|**Expectations**
-    -----|-----
-    0|Does not meet expectations
-    1|Meets expectactions, good job!
-    2|Exceeds expectations, you wonderful creature, you!
 
-This will be useful as an overall gauge of whether you met the project goals, but __the more important scores are described in the specs above__, which can help you identify where to focus your efforts for the next project!
-
-## Presentation Guideline and Criteria
-
-### Format
-
-* Presentation Time: 6 minutes
-* Q & A: 3 minutes
-* **Total Time:** 9 minutes
-
-### Attire
-
-* DRESS TO IMPRESS: [Smart casual](https://en.wikipedia.org/wiki/Smart_casual) would be great
-
-### Outputs
-
-* A presentation in [slides.com](https://slides.com/)
-* A demo deployed on GitHub Pages
-* The presentation and demo will be executed on a class computer (instead of your own)
-* Get ready to explain some of your code in GitHub
-
-### Things you might want to talk about
-
-* Short presentation of yourself:
-	* Who are you?
-	* A hobby you have.
-  * __Note: we are getting you ready for final presentation!__
-* Elevator pitch:
-  * Data set you chose.
-  * Why did you chose that data set?
-  * The most important thing you learned.
-* One technical challenge you faced:
-  * Explain the challenge.
-  * Explain how and what you did to overcome it.
-  * Show and explain code snippets in your presentation slides.
-* Git:
-  * Display an screenshot of your GitHub graphs to show your commit frequency and how much work you did.
-* Data Pipeline Walkthrough:
-  * Walk the audience through the data set you chose, providing an overview of some of the fields and other information contained in the data.
-  * Walk the audience through your process of designing and constructing your data pipeline including what tools and techniques you employed, what avenues you decided to pursue and why, and what lessons you learned.
-* One important mistake you made:
-  * Did you made a mistake in the construction of your pipeline? Did you perform one of the operations incorrectly?
