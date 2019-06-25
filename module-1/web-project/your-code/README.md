@@ -63,6 +63,10 @@ import os`
   2. Then you take the main 'href' from the website and try to get the news from those links.
   3. And now we do a loop to open all the pages in the browser.
   
-- Secondly we are trying going to get all the GIF and Videos from https://9gag.com/
+- Secondly we are trying going to get all the GIF and image from https://9gag.com/
 
   ![Resultado de imagen de 9gag logo](https://www.stickpng.com/assets/images/5900c73c16ae4b3fc58f4822.png)
+
+1. Now we are going to try to access all the images from the website.
+2. So this why we can access the data and follow the path to try to make cool staff.
+3. Exactly!!!
