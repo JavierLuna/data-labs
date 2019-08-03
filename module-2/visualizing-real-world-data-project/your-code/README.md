@@ -1,4 +1,4 @@
-​		<img src="/Users/Alfon/Desktop/Ironhack/Repositorys/data-labs/module-2/visualizing-real-world-data-project/your-code/img/Data-Analytics-What-is-Data-Analytics-Edureka.png" width="200px"/>								<img src="/Users/Alfon/Desktop/Ironhack/Repositorys/data-labs/module-2/visualizing-real-world-data-project/your-code/img/ironhack.png" width="200px"/>
+​		<img src="/Users/Alfon/Desktop/Ironhack/Repositorys/data-labs/module-2/visualizing-real-world-data-project/your-code/Data-Analytics-What-is-Data-Analytics-Edureka.png" width="200px"/>								<img src="/Users/Alfon/Desktop/Ironhack/Repositorys/data-labs/module-2/visualizing-real-world-data-project/your-code/ironhack.png" width="200px"/>
 
 
 
@@ -22,6 +22,22 @@ We need to create or have access to a data work place to be able to manipulate t
 
 For this specific project the tools that we must use is [Jupyter-Notebook](https://jupyter.org/)
 
+For this kind of project we should install and import some libraries that we are going to use:
+
+```python
+import pandas as pd
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+import plotly.plotly as py
+import seaborn as sns
+from ipywidgets import interact
+import cufflinks as cf
+
+%matplotlib inline
+cf.go_offline()
+```
+
 You can learn more visiting there web.
 
 Once you have install jupiter you create a file on "Python 3" call "Analysis":
@@ -30,6 +46,16 @@ Once you have install jupiter you create a file on "Python 3" call "Analysis":
  - Create a DATAFRAME
  - And manage the differents graph that we are going to use
 
+Wich kind of graph we should represent on the project:
+
+:bar_chart:Bar chart
+
+:chart_with_upwards_trend:Bar line
+
+:world_map:Maps (Scatter)
+
+:sweat:Heat Maps
+
 #### Third Step:
 
 You must create a new file on Jupyter call "Analysis", where we are going to :v:Make a Presentation :v: of the project.
@@ -37,29 +63,23 @@ You must create a new file on Jupyter call "Analysis", where we are going to :v:
 This project will analyse the [Imbd](https://www.imdb.com/?ref_=nv_home) data set from 2006 to 2016, answering questions like:
 
 - First we must inspect the database to see if is clean and what type of data is in the db.
+  - Answer 1
 
 - Whats the average duration of all the movies from the database. 
+  - Answer 2
 
 - Which Year is the most successful in terms of Money Vs MetaScore. 
+  - Answer 3
 - Which movie was the one it make more money that year.
-- Which of the 4 most famous was the most profitable.
-- Finally we have an interactive graph where you can see the distribution of Movies by Revenue and Genre, filter by Year, Director and 
-
-Wich kind of graph we should represent on the project:
-
-:bar_chart:Bar chart
-
-:chart_with_upwards_trend:Bar line
-
-:world_map:Maps
-
-:sweat:Heat Maps
-
-
+  - Answer 4
+- Which of the 4 most famous was the most profitable
+  - Answer 5
+- Finally we have an interactive graph where you can see the distribution of Movies by Revenue and Genre, filter by Year. 
+  - Answer 6
 
 Thanks for the attention and I would like to apologise for any mispelling I could write.
 
-Here you can find my contacts:
+Here you can find my contact details:
 
 alfonso_aguado@hotmail.es
 
