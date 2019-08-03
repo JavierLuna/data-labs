@@ -1,4 +1,4 @@
-# :movie_camera:		![ironhack](/Users/Alfon/Desktop/Ironhack/Repositorys/data-labs/module-2/visualizing-real-world-data-project/your-code/ironhack.png) <img src="/Users/Alfon/Desktop/Ironhack/Repositorys/data-labs/module-2/visualizing-real-world-data-project/your-code/Data-Analytics-What-is-Data-Analytics-Edureka.png" width="200px"/>
+# :movie_camera:	:clapper:	:bar_chart:	:clap: Tra tra...
 
 
 
@@ -70,7 +70,7 @@ This project will analyse the [Imbd](https://www.imdb.com/?ref_=nv_home) data se
   - Answer 3
 - Which movie was the one it make more money that year.
   - Answer 4
-- Which of the 4 most famous Directors was the most profitable.
+- Which of this 6 Director has better numbers over all (James Cameron, Martin Scorsese, Quentin Tarantino, Mel Gibson, Ridley Scott, Steven Spielberg), we can make a plot barchart to check the numbers.
   - Answer 5
 - Finally we have an interactive graph where you can see the distribution of Movies by Revenue and MetaScore filtered by Year. 
   - Answer 6
