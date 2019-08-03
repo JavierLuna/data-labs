@@ -10,19 +10,27 @@
 
 This project is going to set basis for the previous learnings that we saw durign the module-2. 
 
-We are going analise and try to discover interesting outcomes and how to represent them from a Real World data base.
+We are going to analise and try to discover interesting outcomes and how to represent them from a Real World dataset.
 
 #### First Step: 
 
-We should download a Real world Database, there are numerous website where you can donwload this kind of data. However we have  a favourite: [Kaggle](https://www.kaggle.com/)
+We should download a Real world Dataset, there are numerous website where you can donwload this kind of data. However we have a favourite: [Kaggle](https://www.kaggle.com/)
 
  #### Second Step:
 
-We need to create or have access to a data work place to be able to manipulate this kind of documents. 
+We need to create or have access to a data environment where we can work properly to be able to manipulate this kind of documents. 
 
 For this specific project the tools that we must use is [Jupyter-Notebook](https://jupyter.org/)
 
-For this kind of project we should install and import some libraries that we are going to use:
+You can learn more visiting there web.
+
+Once you have install jupiter you create a file on "Python 3" call "Analysis":
+
+- In this folder we are going to call the dataset
+- Create a DATAFRAME
+- And manage the differents graph that we are going to use
+
+First you need to do at the beginning of the project is to install and import some libraries that we are going to use:
 
 ```python
 import pandas as pd
@@ -37,14 +45,6 @@ import cufflinks as cf
 %matplotlib inline
 cf.go_offline()
 ```
-
-You can learn more visiting there web.
-
-Once you have install jupiter you create a file on "Python 3" call "Analysis":
-
- - In this folder we are going to call the dataset
- - Create a DATAFRAME
- - And manage the differents graph that we are going to use
 
 Wich kind of graph we should represent on the project:
 
@@ -72,12 +72,14 @@ This project will analyse the [Imbd](https://www.imdb.com/?ref_=nv_home) data se
   - Answer 3
 - Which movie was the one it make more money that year.
   - Answer 4
-- Which of the 4 most famous was the most profitable
+- Which of the 4 most famous Directors was the most profitable.
   - Answer 5
-- Finally we have an interactive graph where you can see the distribution of Movies by Revenue and Genre, filter by Year. 
+- Finally we have an interactive graph where you can see the distribution of Movies by Revenue and MetaScore filtered by Year. 
   - Answer 6
 
 Thanks for the attention and I would like to apologise for any mispelling I could write.
+
+
 
 Here you can find my contact details:
 
@@ -87,7 +89,7 @@ alfonso_aguado@hotmail.es
 
 
 
-ALFONSO OUT!!!! :microphone:
+## ALFONSO OUT!!!! :microphone:
 
  
 
