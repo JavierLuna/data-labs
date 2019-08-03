@@ -1,8 +1,6 @@
-​		<img src="/Users/Alfon/Desktop/Ironhack/Repositorys/data-labs/module-2/visualizing-real-world-data-project/your-code/Data-Analytics-What-is-Data-Analytics-Edureka.png" width="200px"/>								<img src="/Users/Alfon/Desktop/Ironhack/Repositorys/data-labs/module-2/visualizing-real-world-data-project/your-code/ironhack.png" width="200px"/>
+# :movie_camera:		![ironhack](/Users/Alfon/Desktop/Ironhack/Repositorys/data-labs/module-2/visualizing-real-world-data-project/your-code/ironhack.png) <img src="/Users/Alfon/Desktop/Ironhack/Repositorys/data-labs/module-2/visualizing-real-world-data-project/your-code/Data-Analytics-What-is-Data-Analytics-Edureka.png" width="200px"/>
 
 
-
-​		
 
 # Visualizing Real World Data Project
 
