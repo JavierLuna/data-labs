@@ -1,0 +1,15 @@
+*API SCRAPING*
+
+
+Para este proyecto he utilizado la API de google maps.
+
+He puesto dos input donde hay que pooner la siguiente información:
+
+- Where are you
+- Where do you want to go
+
+Importante: Hay que poner dos direcciones, no se pueden poner nombre de lugares.
+
+Una vez que introduces donde estas y a donde quieres ir, te devuelve un JSON con toda la información sobre la ruta.
+
+Despúes de ello he seleccionado la información más útil y la he introducido en un dataset.
