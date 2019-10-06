@@ -1,0 +1,56 @@
+# Academic Kaggle Competitions: Repositorio para documentar competiciones en kaggle. 
+
+## Intro
+
+Este repositorio tiene como fin la documentación y fácil replicación de diferentes competiciones en [kaggle](https://www.kaggle.com/). 
+
+## Entregables
+
+Deberá hacerse una pull request a este repositorio con los siguientes requisitos mínimos: 
+* Entrenar un mínimo de 4 modelos diferentes: 2 vistos en clase y 2 que no
+* Realizar un mínimo de 4 técnicas de Feature Extraction and Engineering
+* Documentación necesaria para poder reproducir el código
+* El código en ficheros `.py` que permita reproducir el ejercicio.
+* El Readme debe contener un resumen de las herramientas y algoritmos de machine learning empleados y los resultados o el score obtenido con cada uno de ellos.
+
+### Feature Extraction and Engineering
+
+Posibles técnicas, además de estudiar el problema y sacar tus conclusiones: 
+
+* One hot encoding
+* Label encoding
+* Get dummies
+* PCA
+* Consumo de API externa y/o web scraping
+
+### Regresión
+
+Posibles modelos de regresión: 
+
+* LinearRegression
+* DecisionTreeRegressor
+* KNeighborsRegressor
+* GradientBoostingRegressor
+* RandomForestRegressor
+
+### Clasificación
+
+Posibles modelos de clasificación: 
+
+* RandomForestClassifier
+* GradientBoostingClassifier
+* AdaBoostClassifier
+* KNeighborsClassifier
+* SVM
+
+## Ejecución de script
+
+En la carpeta **script** se encuentran los siguientes archivos:
+
+* input (dataset completo)
+* output (dataset procesado para hacer competición)
+* source
+    * main.py
+    * functions.py
+
+El procedimiento es ejecutar el siguiente código, con el nombre del dataset que se encuentra en la carpeta input y la columna 
